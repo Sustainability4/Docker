@@ -5,4 +5,8 @@ There is always the issues of compatability, dependency, issues of long setup ti
 
 ## Some Terminologies 
 
-Container is a box that contains a running application. It have its own machine name, address and its own drive. All the containers running on your system use the same OS kernel. 
+Container is a box that contains a running application. It have its own machine name, address and its own drive. All the containers running on your system use the same OS kernel. Hence container is an isolated environment on the same OS kernel. Docker uses Alexsi containers. One cannot run a Windows OS container on linux kernel. It requires Windows OS host. One interesting question can be than how we are able to run a linux container on windows. It basically creates a linux VM which runs on windows. Windows will assign a linus VM to it and inside this VM the container based on linux will run. 
+
+### Containers vs Virtual Machines 
+
+
