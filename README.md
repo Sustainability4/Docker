@@ -44,7 +44,13 @@ Follow this website : https://docs.docker.com/engine/install/ubuntu/
 3. See all running containers : docker ps -a
 4. go inside a container : docker exec -it <container_id> sh
 5. remove all containers which stopped: docker system rm -a
-6. 
+6. Run a container (first it will look the image in local whether this is available or not and if not found will download this image form docker hub): docker run <image_name> 
+7. list all the image : docker images
+8. remove a particular container : docker rm <container_id>
+9. Remove image : docker rmi <image_name>
+10. Pulling the image without running : docker pull <image_name>
+
+
 
 
 
