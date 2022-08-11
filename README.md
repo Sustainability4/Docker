@@ -51,6 +51,10 @@ Follow this website : https://docs.docker.com/engine/install/ubuntu/
 10. Pulling the image without running : docker pull <image_name>
 
 
+# Docker Compose 
+It is a tool to define and share multi container applications. Lets say there are four different containers one is running the flask app, one is running the Cassandra database, one is running Redis messaging service, one is running orchestration service Ansible. If you are not using docker compose for this you will be running all the images separately and bring multiple containers up. But with docker compose yaml file we can bring all the containers up simultaneously. 
+
+This [repository](https://github.com/dockersamples/example-voting-app) is a very concrete example on use of docker compose. 
 
 
 
