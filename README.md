@@ -28,6 +28,7 @@ Download and install docker desktop. It can be found on the website of docker fo
 
 C:\xxxx\yyyyy>docker
 
+$$
 Usage:  docker [OPTIONS] COMMAND
 
 A self-sufficient runtime for containers
@@ -120,6 +121,7 @@ Commands:
 Run 'docker COMMAND --help' for more information on a command.
 
 To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
+$$
 
 ### Check the version : 
 C:\Users\rohan_sharma1>docker --version
@@ -132,11 +134,12 @@ Follow this website : https://docs.docker.com/engine/install/ubuntu/
 
 ## Some commands 
 
-Stop a running docker container : docker stop <container_id>
-Run a docker image :  docker run --publish 8000:8000 node-docker
-See all running containers : docker ps -a
-go inside a container : docker exec -it <container_id> sh
-remove all containers which stopped: docker system rm -a
+1. Stop a running docker container : docker stop <container_id>
+2. Run a docker image :  docker run --publish 8000:8000 node-docker
+3. See all running containers : docker ps -a
+4. go inside a container : docker exec -it <container_id> sh
+5. remove all containers which stopped: docker system rm -a
+6. 
 
 
 
