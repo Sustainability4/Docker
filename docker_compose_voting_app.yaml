@@ -1,0 +1,48 @@
+# The below link functions will change according to the version of compose file. Also the style of writig will change. have a look at docker compose versions. 
+version: 2
+services:
+    redis: 
+      image:redis
+      networks:
+        -backend
+
+    db:
+      image:postgres
+      networks:
+        -backend
+
+    # It will go inside the folder mentioned in build and will look for the dockerfile.
+    vote_app:
+      build:./vote
+      ports:
+        -6000:80
+      links:
+        - redis
+      networks:
+        -frontend
+        -backend
+
+    result:
+      build:./result
+      ports:
+        -6001:80
+      links:
+        - postgres
+      networks:
+        -frontend
+        -backend
+
+    worker:
+      image:worker_app
+      links:
+        - postgres
+        - redis
+      networks:
+        -backend
+
+# Docker networks help define the frontend and backend of a service and also help control te traffic. In our case the voting and result app will be the frontend network
+# and other stuff will be the backend network. 
+
+networks:
+  frontend
+  backend
